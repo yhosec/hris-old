@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee</title>
+    <div th:replace="fragments/header :: header-css"/>
+</head>
+<body>
+<div th:replace="fragments/header :: header"/>
+
+<div class="container">
+    <form th:action="@{/employee/create}" method="post" th:object="${employee}">
+        <fieldset>
+            <legend>Employee Data</legend>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    NIK *
+                </div>
+                <div class="col-lg-5">
+                    <input type="text" th:field="*{nik}" th:class="${#fields.hasErrors('nik')} ? 'form-control  is-invalid' : 'form-control'">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    Barcode
+                </div>
+                <div class="col-lg-5">
+                    <input type="text" th:field="*{barcode}" th:class="${#fields.hasErrors('barcode')} ? 'form-control  is-invalid' : 'form-control'">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    Name *
+                </div>
+                <div class="col-lg-5">
+                    <input type="text" th:field="*{fullName}" th:class="${#fields.hasErrors('fullName')} ? 'form-control  is-invalid' : 'form-control'">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    Phone
+                </div>
+                <div class="col-lg-5">
+                    <input type="text" th:field="*{phone}" th:class="${#fields.hasErrors('phone')} ? 'form-control  is-invalid' : 'form-control'">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    Address
+                </div>
+                <div class="col-lg-5">
+                    <textarea class="form-control" th:field="*{address}" th:class="${#fields.hasErrors('address')} ? 'form-control  is-invalid' : 'form-control'"></textarea>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>User Data <i class="fa fa-info tooltip" data-toggle="tooltip" title="Leave empty if this employee can not login as user in this web." ></i></legend>
+
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    Email
+                </div>
+                <div class="col-lg-5">
+                    <input type="text" th:field="*{email}" th:class="${#fields.hasErrors('email')} ? 'form-control  is-invalid' : 'form-control'">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    Username
+                </div>
+                <div class="col-lg-5">
+                    <input type="text" th:field="*{username}" th:class="${#fields.hasErrors('username')} ? 'form-control  is-invalid' : 'form-control'">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    Role <i class="fa fa-info" data-toggle="tooltip" title="Leave empty if this employee can not login as user in this web." ></i>
+                </div>
+                <div class="col-lg-5">
+                    <select class="form-control" th:field="*{role}">
+                        <option th:each="role : ${roles}" th:value="${role.id}" th:text="${role.name}"></option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+        <div class="form-group clearfix">
+            <a th:href="@{/employee}" class="btn btn-primary">Back</a>
+            <button class="btn btn-primary">Save</button>
+        </div>
+    </form>
+</div>
+<!-- /.container -->
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>

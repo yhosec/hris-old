@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8766fe6a-9b7a-4dd0-91aa-be3c7186cb7e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="26" />
+    <option name="y" value="20" />
+    <option name="width" value="1306" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectId" id="1egiLkwjyxSynbHqCVKKR4fSPmr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561763351338" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gojek/parking-lot-1.4.2/parking-lot" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.josep.hris.enums" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/employee" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="HrisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="hris" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.josep.hris.HrisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8766fe6a-9b7a-4dd0-91aa-be3c7186cb7e" name="Default Changelist" comment="" />
+      <created>1553187058469</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553187058469</updated>
+      <workItem from="1553187061058" duration="1345000" />
+      <workItem from="1553264493832" duration="1595000" />
+      <workItem from="1553268880120" duration="538000" />
+      <workItem from="1553269980743" duration="5294000" />
+      <workItem from="1553358252488" duration="2524000" />
+      <workItem from="1553401854719" duration="1555000" />
+      <workItem from="1553788460519" duration="2573000" />
+      <workItem from="1553939082038" duration="4342000" />
+      <workItem from="1554652485943" duration="6146000" />
+      <workItem from="1554660430576" duration="2879000" />
+      <workItem from="1554824505214" duration="5517000" />
+      <workItem from="1555085640031" duration="897000" />
+      <workItem from="1555150916993" duration="2108000" />
+      <workItem from="1555167622178" duration="17507000" />
+      <workItem from="1555191859456" duration="1897000" />
+      <workItem from="1555219244879" duration="3609000" />
+      <workItem from="1555341760920" duration="599000" />
+      <workItem from="1555436335780" duration="3729000" />
+      <workItem from="1555440395955" duration="2929000" />
+      <workItem from="1555488109777" duration="1959000" />
+      <workItem from="1555961440253" duration="671000" />
+      <workItem from="1556122069942" duration="2142000" />
+      <workItem from="1556986983887" duration="2004000" />
+      <workItem from="1557081615432" duration="2949000" />
+      <workItem from="1558540982800" duration="598000" />
+      <workItem from="1561742844392" duration="37000" />
+      <workItem from="1561742936908" duration="613000" />
+      <workItem from="1561762681769" duration="2429000" />
+      <workItem from="1561831551155" duration="631000" />
+      <workItem from="1561834958773" duration="39000" />
+      <workItem from="1563892041585" duration="201000" />
+      <workItem from="1594749591665" duration="1315000" />
+      <workItem from="1594917177034" duration="158000" />
+      <workItem from="1595284730003" duration="322000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="315" y="0" width="749" height="736" key="#HrisApplication" timestamp="1594749732955">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state x="315" y="0" width="749" height="736" key="#HrisApplication/0.0.1366.732@0.0.1366.732" timestamp="1594749732955" />
+    <state x="364" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1595285044012">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state x="364" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.732@0.0.1366.732" timestamp="1595285044012" />
+    <state x="360" y="93" width="645" height="546" key="find.popup" timestamp="1594750611420">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state x="360" y="93" width="645" height="546" key="find.popup/0.0.1366.732@0.0.1366.732" timestamp="1594750611420" />
+    <state x="343" y="11" width="672" height="676" key="search.everywhere.popup" timestamp="1594917289668">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state x="343" y="11" width="672" height="676" key="search.everywhere.popup/0.0.1366.732@0.0.1366.732" timestamp="1594917289668" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>hris</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

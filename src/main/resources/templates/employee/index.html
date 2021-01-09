@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <div th:replace="partial/header :: header-css('Little HR')"/>
+</head>
+<body>
+    <div class="container-scroller">
+        <div th:replace="partial/header :: header"/>
+        <div class="container-fluid page-body-wrapper">
+            <div th:replace="partial/header :: menu"/>
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <div th:replace="partial/header :: breadcrumb('Employee Index')"/>
+                    <div class="row">
+                        <div class="col-12 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Employee Index</h4>
+                                    <div class="form-group" th:if="${message}">
+                                        <div class="alert alert-info" th:text="${message}"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <a th:href="@{/employee/create}" class="btn btn-primary">Add Employee</a>
+                                        <a th:href="@{/employee/pdf}" class="btn btn-primary">Download PDF</a>
+                                        <a th:href="@{/employee/xls}" class="btn btn-primary">Download XLS</a>
+                                    </div>
+
+                                    <table class="table table-bordered table-hover">
+                                        <thead>
+                                        <th>
+                                            <a th:if="${(sortType != 'asc' && sortType != 'desc') || sort != 'nik'}" th:href="@{/employee/(page=${paginate.currentPage},sort='nik', sort_type='asc')}
+                    ">
+                                                NIK
+                                            </a>
+                                            <a th:if="${sort == 'nik' && sortType == 'asc'}" th:href="@{/employee/(page=${paginate.currentPage},sort='nik', sort_type='desc')}">
+                                                NIK <i class="fa fa-sort-asc"></i>
+                                            </a>
+                                            <a th:if="${sort == 'nik' && sortType == 'desc'}" th:href="@{/employee/(page=${paginate.currentPage})}">
+                                                NIK <i class="fa fa-sort-desc"></i>
+                                            </a>
+                                        </th>
+                                        <th>
+                                            <a th:if="${(sortType != 'asc' && sortType != 'desc') || sort != 'fullName'}" th:href="@{/employee/(page=${paginate.currentPage},sort='fullName', sort_type='asc')}
+                    ">
+                                                Name
+                                            </a>
+                                            <a th:if="${sort == 'fullName' && sortType == 'asc'}" th:href="@{/employee/(page=${paginate.currentPage},sort='fullName', sort_type='desc')}">
+                                                Name <i class="fa fa-sort-asc"></i>
+                                            </a>
+                                            <a th:if="${sort == 'fullName' && sortType == 'desc'}" th:href="@{/employee/(page=${paginate.currentPage})}">
+                                                Name <i class="fa fa-sort-desc"></i>
+                                            </a>
+                                        </th>
+                                        <th>
+                                            <a th:if="${(sortType != 'asc' && sortType != 'desc') || sort != 'address'}" th:href="@{/employee/(page=${paginate.currentPage},sort='address', sort_type='asc')}
+                    ">
+                                                Address
+                                            </a>
+                                            <a th:if="${sort == 'address' && sortType == 'asc'}" th:href="@{/employee/(page=${paginate.currentPage},sort='address', sort_type='desc')}">
+                                                Address <i class="fa fa-sort-asc"></i>
+                                            </a>
+                                            <a th:if="${sort == 'address' && sortType == 'desc'}" th:href="@{/employee/(page=${paginate.currentPage})}">
+                                                Address <i class="fa fa-sort-desc"></i>
+                                            </a>
+                                        </th>
+                                        <th>
+                                            <a th:if="${(sortType != 'asc' && sortType != 'desc') || sort != 'joinDate'}" th:href="@{/employee/(page=${paginate.currentPage},sort='joinDate', sort_type='asc')}
+                    ">
+                                                Join Date
+                                            </a>
+                                            <a th:if="${sort == 'joinDate' && sortType == 'asc'}" th:href="@{/employee/(page=${paginate.currentPage},sort='joinDate', sort_type='desc')}">
+                                                Join Date <i class="fa fa-sort-asc"></i>
+                                            </a>
+                                            <a th:if="${sort == 'joinDate' && sortType == 'desc'}" th:href="@{/employee/(page=${paginate.currentPage})}">
+                                                Join Date <i class="fa fa-sort-desc"></i>
+                                            </a>
+                                        </th>
+                                        <th></th>
+                                        </thead>
+                                        <tbody>
+                                        <th:block th:each="employee : ${employees}">
+                                            <tr>
+                                                <td th:text="${employee.nik}"></td>
+                                                <td th:text="${employee.fullName}"></td>
+                                                <td th:text="${employee.address}"></td>
+                                                <td th:text="${#dates.format(employee.joinDate, 'dd-MMM-yyyy')}"></td>
+                                                <td>
+                                                    <a th:href="@{'/employee/detail/'+${employee.id}}">Detail</a>
+                                                    <a th:href="@{'/employee/edit/'+${employee.id}}">Edit</a>
+                                                    <a th:href="@{'/employee/delete/'+${employee.id}}">Delete</a>
+                                                </td>
+                                            </tr>
+                                        </th:block>
+                                        </tbody>
+                                    </table>
+                                    <div class="text-right">
+                                        Total Data : <span th:text="${paginate.totalResult}"></span>
+                                    </div>
+                                    <div class="text-right">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination justify-content-end">
+                                                <li th:class="${paginate.isButtonFirst()} ? 'page-item' : 'page-item disabled'">
+                                                    <a class="page-link" th:href="@{/employee/(page=1)}"> First </a>
+                                                </li>
+                                                <li th:class="${paginate.isButtonPrev()} ? 'page-item' : 'page-item disabled'">
+                                                    <a class="page-link" th:href="@{/employee/(page=${paginate.currentPage-1})}"> Prev </a>
+                                                </li>
+
+                                                <li th:class="${paginate.currentPage == page } ? 'page-item disabled active' : 'page-item'"
+                                                    th:each="page : ${#numbers.sequence(paginate.startPage, paginate.endPage)}">
+                                                    <a class="page-link" th:href="@{/employee/(page=${page})}" th:text="${page}"></a>
+                                                </li>
+
+                                                <li th:class="${paginate.isButtonNext()} ? 'page-item' : 'page-item disabled'">
+                                                    <a class="page-link" th:href="@{/employee/(page=${paginate.currentPage+1})}"> Next </a>
+                                                </li>
+                                                <li th:class="${paginate.isButtonLast()} ? 'page-item' : 'page-item disabled'">
+                                                    <a class="page-link" th:href="@{/employee/(page=${paginate.totalPage})}"> Last </a>
+                                                </li>
+                                            </ul>
+                                            Page <span th:text="${paginate.currentPage}"></span> of <span th:text="${paginate.totalPage}"></span>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div th:replace="partial/footer :: footer"/>
+            </div>
+        </div>
+    </div>
+    <div th:replace="partial/footer :: footer-js"/>
+</body>
+</html>

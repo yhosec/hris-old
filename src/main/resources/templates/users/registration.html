@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+    <div th:replace="partial/header :: header-css('Little HR - Login')"/>
+</head>
+<body>
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="content-wrapper d-flex align-items-center auth">
+            <div class="row w-100">
+                <div class="col-lg-4 mx-auto">
+                    <div class="auth-form-light text-left p-5">
+                        <div class="brand-logo">
+                            <img src="../../images/logo.svg">
+                        </div>
+                        <form th:action="@{/registration}" method="post" th:object="${users}">
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                            <div class="form-group">
+                                <label for="companyName" class="form-control-label">Your Company Name</label>
+                                <input type="text" id="companyName" th:field="*{companyName}" >
+                                <span class="error" th:if="${#fields.hasErrors('companyName')}" th:errors="*{companyName}"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="fullName" class="form-control-label">Your Name</label>
+                                <input type="text" id="fullName" th:field="*{fullName}" th:class="${#fields.hasErrors('fullName')} ? 'form-control  is-invalid' : 'form-control'">
+                                <span class="error" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="username" class="form-control-label">Username</label>
+                                <input type="text" id="username" th:field="*{username}" th:class="${#fields.hasErrors('username')} ? 'form-control  is-invalid' : 'form-control'">
+                                <span class="error" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-control-label">Your Phone</label>
+                                <input type="text" id="phone" th:field="*{phone}" th:class="${#fields.hasErrors('phone')} ? 'form-control  is-invalid' : 'form-control'">
+                                <span class="error" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-control-label">Your Email</label>
+                                <input type="email" id="email" th:field="*{email}" th:class="${#fields.hasErrors('email')} ? 'form-control  is-invalid' : 'form-control'">
+                                <span class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="form-control-label">password</label>
+                                <input type="password" id="password" th:field="*{password}" th:class="${#fields.hasErrors('password')} ? 'form-control  is-invalid' : 'form-control'">
+                                <span class="error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="passwordConfrim" class="form-control-label">password</label>
+                                <input type="password" id="passwordConfrim" th:field="*{passwordConfrim}" th:class="${#fields.hasErrors('passwordConfrim')} ? 'form-control is-invalid' : 'form-control'">
+                                <span class="error" th:if="${#fields.hasErrors('passwordConfrim')}" th:errors="*{passwordConfrim}"></span>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <label class="form-check-label text-muted">
+                                        <input type="checkbox" class="form-check-input">
+                                        I agree to all Terms & Conditions
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content-wrapper ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<div th:replace="partial/footer :: footer-js"/>
+</body>
+
+</html>
